@@ -1,0 +1,123 @@
+@import "https://fonts.googleapis.com/css2?family=Anuphan:wght@500&family=Chivo+Mono:ital,wght@1,100&family=Kalam&family=Lobster&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Anuphan:wght@500&family=Chivo+Mono:ital,wght@1,100&family=Lobster&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4A849C;
+  width: 100%;
+}
+header img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 200px;
+}
+header nav {
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 2rem;
+  font-family: "lobster";
+}
+header form {
+  position: relative;
+}
+header form input {
+  padding: 1rem;
+  width: 15rem;
+  border-radius: 6px 0 0 6px;
+  border: none;
+  top: 0;
+  left: 0;
+  margin-right: 0;
+}
+header form button {
+  cursor: pointer;
+  box-shadow: 0 0 5px;
+  position: absolute;
+  border-radius: 0 6px 6px 0;
+  width: 3rem;
+  padding: 1rem;
+  border: none;
+  background-color: white;
+}
+header ul {
+  height: 60px;
+  list-style: none;
+  padding: 10px;
+}
+header ul li {
+  float: left;
+  width: 150px;
+}
+header ul li a {
+  font-family: "lobster";
+}
+header ul li a:link {
+  display: block;
+  color: white;
+  background: #4A849C;
+  padding: 6px 10px;
+  border-right: 1px solid #FFF;
+  text-align: center;
+  text-decoration: none;
+}
+header ul li a:visited {
+  display: block;
+  color: white;
+  background: #4A849C;
+  padding: 6px 10px;
+  border-right: 1px solid #FFF;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  color: white;
+  text-decoration: none;
+  background-color: #4A849C;
+}
+header ul li a:hover {
+  background-color: #4A849C;
+}
+header ul li a:active {
+  background-color: #CFAE6E;
+}
+header ul li:hover .sub-menu {
+  display: block;
+}
+header .sub-menu {
+  list-style-type: none;
+  display: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+header .sub-menu li {
+  float: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+header .sub-menu li a:link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  background-color: #DAD5D5;
+}
+header .sub-menu li a:hover {
+  background-color: #CFAE6E;
+}/*# sourceMappingURL=header.css.map */

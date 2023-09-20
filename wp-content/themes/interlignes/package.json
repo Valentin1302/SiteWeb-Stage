@@ -1,0 +1,9 @@
+{
+  "scripts":{
+    "sass -version" : "sass --version",
+    "sass -watch" : "sass -w ./views/webfiles/styles/sass/main.scss:./views/webfiles/styles/main.css"
+  },
+  "dependencies": {
+    "sass": "1.63.6"
+  }
+}

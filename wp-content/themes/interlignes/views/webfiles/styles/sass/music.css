@@ -1,0 +1,58 @@
+.titleCategories {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.allList {
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.allList .bloc {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 33%;
+  padding: 2rem 0;
+}
+.allList .bloc img {
+  object-fit: contain;
+  margin: auto;
+}
+.allList .bloc .blocText {
+  margin: auto;
+  font-family: "roboto";
+  display: flex;
+  flex-direction: column;
+}
+.allList .titleName {
+  font-weight: bold;
+}
+
+.paginate {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .allList .bloc {
+    width: 50%;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  }
+  .allList .bloc p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .allList .bloc {
+    width: 100%;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  }
+  .allList .bloc p {
+    font-size: 10px;
+  }
+}
+
+/*# sourceMappingURL=music.css.map */

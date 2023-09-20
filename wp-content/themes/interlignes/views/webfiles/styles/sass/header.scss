@@ -1,0 +1,167 @@
+$color_1: white;
+$color_2: #749F60;
+$color_3: #222;
+$color_4: gold;
+$font-family_1: 'great vibes';
+$font-family_2: 'lobster';
+$font-family_3: 'kalam';
+$font-family_4: 'roboto';
+$font-family_5: 'kamal';
+$background-color_1: #115F7E;
+$background-color_2: white;
+$background-color_3: #DAD5D5;
+$background-color_4: #CFAE6E;
+$background-color_5: rgb(193, 148, 148);
+$background-color_6: #b77342;
+
+
+@import "https://fonts.googleapis.com/css2?family=Anuphan:wght@500&family=Chivo+Mono:ital,wght@1,100&family=Kalam&family=Lobster&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap";
+;
+@import "https://fonts.googleapis.com/css2?family=Anuphan:wght@500&family=Chivo+Mono:ital,wght@1,100&family=Lobster&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: $background-color_1;
+    width: 100%;
+
+    img {
+        object-fit: contain;
+        max-width: 200px;
+    }
+
+    nav {
+        max-width: 1500px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            list-style: none;
+            display: flex;
+
+            a {
+                text-decoration: none;
+                color: $color_1;
+                display: block;
+                padding: 2rem;
+                font-family: $font-family_2;
+            }
+        }
+    }
+
+    form {
+        position: relative;
+
+        input {
+            padding: 1rem;
+
+            width: 15rem;
+            border-radius: 6px 0 0 6px;
+            border: none;
+            top: 0;
+            left: 0;
+            margin-right: 0;
+        }
+
+        button {
+            cursor: pointer;
+            box-shadow: 0 0 5px;
+            position: absolute;
+            border-radius: 0 6px 6px 0;
+            width: 3rem;
+            padding: 1rem;
+            border: none;
+            background-color: $background-color_2;
+        }
+    }
+
+    ul {
+        height: 60px;
+        list-style: none;
+        padding: 10px;
+
+        li {
+            float: left;
+            width: 150px;
+
+            a {
+                font-family: $font-family_2;
+
+                &:link {
+                    display: block;
+                    color: $color_1;
+                    background: $background-color_1;
+                    padding: 6px 10px;
+                    border-right: 1px solid #FFF;
+                    text-align: center;
+                    text-decoration: none;
+                }
+
+                &:visited {
+                    display: block;
+                    color: $color_1;
+                    background: $background-color_1;
+                    padding: 6px 10px;
+                    border-right: 1px solid #FFF;
+                    text-align: center;
+                    text-decoration: none;
+                    display: block;
+                    color: $color_1;
+                    text-decoration: none;
+                    background-color: $background-color_1;
+                }
+
+                &:hover {
+                    background-color: $background-color_1;
+                }
+
+                &:active {
+                    background-color: $background-color_4;
+                }
+            }
+
+            &:hover {
+                .sub-menu {
+                    display: block;
+                }
+            }
+        }
+    }
+
+
+    .sub-menu {
+        list-style-type: none;
+        display: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+
+        li {
+            float: none;
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid transparent;
+            border-right: 1px solid transparent;
+
+            a {
+                &:link {
+                    display: block;
+                    color: $color_1;
+                    text-decoration: none;
+                    background-color: $background-color_3;
+                }
+
+                &:hover {
+                    background-color: $background-color_4;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,363 @@
+@import "header.scss";
+@import "jeux.scss";
+@import "music.scss";
+@import "book.scss";
+@import "footer.scss";
+
+
+
+main {
+    width: 100%;
+
+    h1 {
+        text-align: center;
+        padding-top: 1rem;
+        font-family: 'kalam';
+    }
+
+    
+
+    .horaire {
+        padding: 1rem 0 1rem 0;
+        margin: auto;
+        width: 100%;
+        max-width: 1500px;
+        background-color: $background-color_6;
+        color: $color_1;
+        font-family: $font-family_2;
+        border-radius: 15px;
+        margin-top: 1rem;
+    }
+
+    .jour {
+        margin-top: 0.5rem;
+        margin-left: 0.75rem;
+    }
+
+    .heure {
+        margin-top: 0.5rem;
+        margin-left: 0.75rem;
+    }
+
+    .info {
+        padding-left: 0.75rem;
+    }
+
+    .intro {
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .biographie {
+        width: 100%;
+        max-width: 1500px;
+        border-radius: 15px;
+        text-align: justify;
+        margin: auto;
+        background-color: $background-color_1;
+        margin-top: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        h2 {
+            color: $color_4;
+            font-family: $font-family_2;
+        }
+
+        p {
+            color: $color_4;
+        }
+
+        a {
+            color: $color_1;
+        }
+    }
+
+
+    .detail {
+        margin-top: 1.5rem;
+    }
+
+
+    .histoire {
+        padding: 1rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    .titleBloc{
+        padding-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        background-color: $background-color_6;
+        margin: auto;
+        max-width: 1500px;
+        flex-wrap: wrap;
+    }
+
+    .titleBook {
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+        margin: auto;
+        margin: 1rem;
+        font-size: 20px;
+        text-decoration: none;
+        color: $color_1;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: $color_4;
+            width: 100%;
+            height: 3px;
+            top: 2rem;
+            transform-origin: 100% 0;
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        &:hover {
+            &::before {
+                transform-origin: 0 0;
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    #actu {
+        text-transform: uppercase;
+        text-align: center;
+        margin: auto;
+        margin: 1rem;
+        font-size: 20px;
+        text-decoration: none;
+        color: $color_3;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: $background-color_4;
+            width: 8%;
+            height: 3px;
+            top: 2rem;
+            transform-origin: 100% 0;
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        &:hover {
+            &::before {
+
+                transform-origin: 0 0;
+                transform: scaleX(1);
+            }
+        }
+    }
+    section {
+        padding-top: 1.5rem;
+        display: flex;
+        justify-content: flex-start;
+        background-color: $background-color_6;
+        margin: auto;
+        max-width: 1500px;
+        flex-wrap: wrap;
+
+        .blocBook {
+            width: 33%
+        }
+
+        div {
+            margin: auto;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            img {
+                object-fit: cover;
+                transition: transform .1s;
+                margin: auto;
+            }
+
+            img:hover {
+                -ms-transform: scale(1.5);
+                -webkit-transform: scale(1.5);
+                transform: scale(1.5);
+            }
+
+            h3 {
+                margin-top: 1.5rem;
+                margin-bottom: 2.5rem;
+                text-transform: uppercase;
+                color: $color_4;
+            }
+
+            .priceImg {
+                margin-bottom: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+
+                p {
+                    font-weight: bold;
+                    font-size: 25px;
+
+                }
+            }
+
+            .panier {
+                margin: 0 1rem;
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+}
+
+
+#carou {
+    margin: 1.25rem 22rem;                
+    width: inherit;                       
+    height: inherit;                      
+}
+
+#slider {
+    position: relative;               
+    width: 100%;                      
+    height: 100%;                  
+    margin: auto;                     
+    display: flex;                    
+    align-items: center;              
+}
+
+#precedent,
+#suivant {
+    cursor: pointer;                             
+    transition: opacity 0.3s ease;             
+    opacity: 0;                                 
+    position: absolute;                         
+    font-size: 100px;                          
+    color: black;          
+    background-color: transparent;     
+    padding: 10px;                              
+}
+
+#precedent {
+    left: 0;            
+}
+
+#suivant {
+    right: 0;         
+}
+
+#slider:hover #precedent,
+#slider:hover #suivant {
+    opacity: 1;             
+}
+
+.imgslider{
+    width: inherit;          
+    height: 25rem;          
+    display: none;
+    animation:fade 0.8s;
+    object-fit: cover;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#showing{
+    display: block;
+}
+
+@media screen and (max-width:1024px) {
+    header {
+        nav {
+            form {
+                display: none;
+            }
+
+            ul {
+                display: none;
+            }
+            button {
+                width: 30px;
+                height: 25px;
+                position: absolute;
+                padding: 1 1.5rem;
+                border: none;
+                border-top: 3px solid white;
+                border-bottom: 3px solid white;
+                background: transparent;
+                right: 0.5rem;
+                cursor: pointer;
+                transform: rotateZ(0deg);
+            }
+            button::before,
+            button::after {
+                content: "";
+                height: 2px;
+                width: 100%;
+                right: 0;
+                position: absolute;
+                background-color: white;
+              
+            }
+
+            .active {
+               border: none;
+            }
+
+            .active::before {
+                transform: rotateZ(45deg);
+             
+            }
+
+            .active::after {
+                transform: rotateZ(-45deg);
+            }
+
+            .open{
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+            }
+        }
+    }
+main{
+  section{
+    .blocBook{
+        width:50%;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+  }
+}
+
+}
+
+
+
+@media screen and (max-width:415px) {
+    main {
+        section {
+            .blocBook {
+                width: 80%;
+                padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+            }
+        }
+    }
+  
+    
+   
+
+  
+}

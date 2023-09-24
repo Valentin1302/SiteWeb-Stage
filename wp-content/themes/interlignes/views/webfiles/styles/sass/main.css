@@ -103,6 +103,7 @@ header .sub-menu {
   padding: 0;
   margin: 0;
   position: absolute;
+  z-index: 10;
 }
 header .sub-menu li {
   float: none;
@@ -206,8 +207,10 @@ header .sub-menu li a:hover {
   }
 }
 footer {
+  padding: 3rem 0 3rem 0;
   width: 100%;
   background-color: #115F7E;
+  margin-top: 5rem;
 }
 footer p {
   color: white;
@@ -217,6 +220,7 @@ footer h3 {
   letter-spacing: 0.1rem;
 }
 footer a {
+  font-family: "roboto";
   color: white;
   text-decoration: none;
 }
@@ -224,6 +228,7 @@ footer a:hover {
   text-decoration: underline #CFAE6E;
 }
 footer li {
+  margin: 2rem 0 2rem 0;
   list-style: none;
 }
 footer > div {
@@ -246,82 +251,63 @@ footer .menu-reseaux-sociaux-container li:first-of-type::before {
   width: 32px;
   height: 32px;
   position: absolute;
-  top: 40px;
+  left: -45px;
+  content: "";
+  background-image: url("http://wordpress-stage.test/wp-content/uploads/2023/06/facebook-e1688129645708.png");
+}
+footer .menu-reseaux-sociaux-container li:nth-of-type(2)::before {
+  width: 32px;
+  height: 32px;
+  position: absolute;
   left: -45px;
   content: "";
   background-image: url("http://wordpress-stage.test/wp-content/uploads/2023/06/instagram-e1688129629102.png");
 }
-
-.phone {
-  display: flex;
-  align-items: center;
+footer .menu-contact-container li {
+  position: relative;
 }
-
-.gmail {
-  display: flex;
-  align-items: center;
+footer .menu-contact-container li:first-of-type::before {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -45px;
+  content: "";
+  background-image: url("http://wordpress-stage.test/wp-content/uploads/2023/06/telephone-call-e1688129732648.png");
 }
-
-.insta {
-  display: flex;
-  align-items: center;
+footer .menu-contact-container li:nth-of-type(2)::before {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -45px;
+  content: "";
+  background-image: url("http://wordpress-stage.test/wp-content/uploads/2023/06/e-mail-e1688129808496.png");
 }
-
-.fb {
-  display: flex;
-  align-items: center;
-}
-
-h3 {
+footer h3 {
   color: white;
 }
-
-.comptefb {
-  margin-top: 0.8rem;
-  margin-left: 0.2rem;
-  font-family: "kamal";
-}
-
-.compte {
-  margin-top: 0.8rem;
-  margin-left: 0.2rem;
-  font-family: "lobster";
-}
-
-.num {
-  margin-top: 0.8rem;
-  margin-left: 0.2rem;
-  font-family: "lobster";
-}
-
-.inter {
-  margin-top: 0.8rem;
-  margin-left: 0.2rem;
-  font-family: "kamal";
-}
-
 @media screen and (max-width: 824px) {
-  footer div {
+  footer footer div {
     display: block;
     text-align: center;
     align-items: center;
     justify-content: center;
   }
-  footer div h3 {
+  footer footer div h3 {
     margin: 1rem 0;
   }
 }
 @media screen and (max-width: 415px) {
-  footer div {
+  footer footer div {
     display: block;
     text-align: center;
     align-items: center;
     justify-content: center;
   }
-  footer div h3 {
+  footer footer div h3 {
     margin: 1rem 0;
   }
 }
+
 main {
   width: 100%;
 }
@@ -455,6 +441,18 @@ main section {
 main section .blocBook {
   width: 33%;
 }
+main section .blocBook .blocText .title-book-accueil {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: gold;
+  margin-top: 2rem;
+  font-family: "roboto";
+}
+main section .blocBook .blocText .priceBloc .price-accueil {
+  color: white;
+  margin: 2rem 0 2rem 0;
+  font-family: "roboto";
+}
 main section div {
   margin: auto;
   box-sizing: border-box;
@@ -466,6 +464,7 @@ main section div img {
   object-fit: cover;
   transition: transform 0.1s;
   margin: auto;
+  height: 220px;
 }
 main section div img:hover {
   -ms-transform: scale(1.5);
@@ -595,6 +594,8 @@ main section div .panier {
   }
   header nav .open {
     display: flex;
+    position: absolute;
+    right: 0;
     flex-direction: column;
     text-align: center;
   }

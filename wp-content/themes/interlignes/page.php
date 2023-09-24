@@ -76,10 +76,13 @@ get_header();
 			<?php
 			foreach ($query->posts as $post) { ?>
 				<div class="blocBook">
-					<p><?= $post->post_content; ?></p>
+					<p><?= $post->post_content; ?></p>	
 					<?= get_the_post_thumbnail($post); ?>
-					<div>
-						<p>Prix : <?= get_field("pricebook", $post->ID); ?>€</p>
+					<div class="blocText">
+						<p class="title-book-accueil"><?= $post->post_title; ?></p>
+						<div class="priceBloc">
+						<p class="price-accueil">Prix : <?= get_field("pricebook", $post->ID); ?>€</p>
+						</div>
 					</div>
 				</div>
 			<?php }
@@ -109,7 +112,10 @@ $args = array(
 					<p><?= $post->post_content; ?></p>
 					<?= get_the_post_thumbnail($post); ?>
 					<div class="blocText">
-						<p>Prix : <?= get_field("pricebook", $post->ID); ?>€</p>
+					    <p class="title-book-accueil"><?= $post->post_title; ?></p>
+						<div class="priceBloc">
+							<p class="price-accueil">Prix : <?= get_field("pricebook", $post->ID); ?>€</p>
+						</div>
 					</div>
 				</div>
 			<?php }

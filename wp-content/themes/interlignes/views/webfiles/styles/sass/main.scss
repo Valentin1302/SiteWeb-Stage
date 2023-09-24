@@ -165,7 +165,23 @@ main {
         flex-wrap: wrap;
 
         .blocBook {
-            width: 33%
+            width: 33%;
+            .blocText{
+                .title-book-accueil{
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: gold;
+                    margin-top: 2rem;
+                    font-family: $font-family_4;
+                }
+                .priceBloc{
+                   .price-accueil{
+                    color: $color_1;
+                    margin: 2rem 0 2rem 0;
+                    font-family: $font-family_4;
+                   }
+                }
+            } 
         }
 
         div {
@@ -179,6 +195,7 @@ main {
                 object-fit: cover;
                 transition: transform .1s;
                 margin: auto;
+                height: 220px;
             }
 
             img:hover {
@@ -328,6 +345,8 @@ main {
 
             .open{
               display: flex;
+              position: absolute;
+              right: 0;
               flex-direction: column;
               text-align: center;
             }

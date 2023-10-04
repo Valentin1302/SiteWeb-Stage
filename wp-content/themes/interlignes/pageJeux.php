@@ -30,7 +30,7 @@ $query = new WP_Query($args);
                 <p class="titleName">Titre : <?= $post->post_title; ?></p>
                 <p>Editeur : <?= get_field("editorGame", $post->ID); ?></p>
                 <p>Prix : <?= get_field("pricegame", $post->ID); ?>€</p>
-                <p>Catégories : <?= get_the_category($post->ID)[0]->name; ?></p>
+                <p>Catégorie : <?= get_the_category($post->ID)[0]->name; ?></p>
             </div>
         </div>
     <?php }

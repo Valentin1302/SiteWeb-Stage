@@ -7,7 +7,7 @@
 }
 
 header {
-  background-color: #4A849C;
+  background-color: #115F7E;
   width: 100%;
 }
 header img {
@@ -69,7 +69,7 @@ header ul li a {
 header ul li a:link {
   display: block;
   color: white;
-  background: #4A849C;
+  background: #115F7E;
   padding: 6px 10px;
   border-right: 1px solid #FFF;
   text-align: center;
@@ -78,7 +78,7 @@ header ul li a:link {
 header ul li a:visited {
   display: block;
   color: white;
-  background: #4A849C;
+  background: #115F7E;
   padding: 6px 10px;
   border-right: 1px solid #FFF;
   text-align: center;
@@ -86,10 +86,10 @@ header ul li a:visited {
   display: block;
   color: white;
   text-decoration: none;
-  background-color: #4A849C;
+  background-color: #115F7E;
 }
 header ul li a:hover {
-  background-color: #4A849C;
+  background-color: #115F7E;
 }
 header ul li a:active {
   background-color: #CFAE6E;
@@ -103,6 +103,7 @@ header .sub-menu {
   padding: 0;
   margin: 0;
   position: absolute;
+  z-index: 10;
 }
 header .sub-menu li {
   float: none;
@@ -121,8 +122,190 @@ header .sub-menu li a:hover {
   background-color: #CFAE6E;
 }
 
-.texte {
-  background-image: url("../../../src/img/jeunesse.jpg");
+.titleCategories {
+  padding: 2rem 0;
+  text-align: center;
+  font-family: "kalam";
+}
+
+.allList {
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.allList .bloc {
+  border-radius: 5px;
+  background: #b77342;
+  border: solid 2px gray;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 33%;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+.allList .bloc img {
+  height: 150px;
+  object-fit: contain;
+  margin: auto;
+}
+.allList .bloc .blocText {
+  margin: auto;
+  font-family: "roboto";
+  display: flex;
+  flex-direction: column;
+}
+.allList .titleName {
+  font-weight: bold;
+  color: gold;
+}
+.allList p {
+  font-family: "roboto";
+  color: white;
+}
+
+.paginate {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.paginate .page-numbers {
+  border: solid 2px #115F7E;
+}
+.paginate a {
+  color: white;
+  text-decoration: none;
+  border: solid 2px #115F7E;
+  padding: 1rem;
+  background: #b77342;
+}
+.paginate span {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  background: #b77342;
+}
+
+@media screen and (max-width: 1024px) {
+  .allList .bloc {
+    width: 50%;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  }
+  .allList .bloc p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .allList .bloc {
+    width: 100%;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  }
+  .allList .bloc p {
+    font-size: 10px;
+  }
+}
+footer {
+  padding: 3rem 0 3rem 0;
+  width: 100%;
+  background-color: #115F7E;
+  margin-top: 5rem;
+}
+footer p {
+  color: white;
+}
+footer h3 {
+  font-family: "roboto";
+  letter-spacing: 0.1rem;
+}
+footer a {
+  font-family: "roboto";
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline #CFAE6E;
+}
+footer li {
+  margin: 2rem 0 2rem 0;
+  list-style: none;
+}
+footer > div {
+  margin-left: 2rem;
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 1rem;
+}
+footer img {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+}
+footer .menu-reseaux-sociaux-container li {
+  position: relative;
+}
+footer .menu-reseaux-sociaux-container li:first-of-type::before {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -45px;
+  content: "";
+  background-image: url("./wp-content/uploads/2023/06/facebook-e1688129645708.png");
+}
+footer .menu-reseaux-sociaux-container li:nth-of-type(2)::before {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -45px;
+  content: "";
+  background-image: url("./wp-content/uploads/2023/06/instagram-e1688129629102.png");
+}
+footer .menu-contact-container li {
+  position: relative;
+}
+footer .menu-contact-container li:first-of-type::before {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -45px;
+  content: "";
+  background-image: url("./wp-content/uploads/2023/06/telephone-call-e1688129732648.png");
+}
+footer .menu-contact-container li:nth-of-type(2)::before {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -45px;
+  content: "";
+  background-image: url("./wp-content/uploads/2023/06/e-mail-e1688129808496.png");
+}
+footer h3 {
+  color: white;
+}
+@media screen and (max-width: 824px) {
+  footer footer div {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  footer footer div h3 {
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 415px) {
+  footer footer div {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  footer footer div h3 {
+    margin: 1rem 0;
+  }
 }
 
 main {
@@ -138,7 +321,7 @@ main .horaire {
   margin: auto;
   width: 100%;
   max-width: 1500px;
-  background-color: #CFAE6E;
+  background-color: #b77342;
   color: white;
   font-family: "lobster";
   border-radius: 15px;
@@ -153,10 +336,11 @@ main .heure {
   margin-left: 0.75rem;
 }
 main .info {
-  margin-left: 0.75rem;
+  padding-left: 0.75rem;
 }
 main .intro {
-  margin-left: 0.75rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
 }
 main .biographie {
   width: 100%;
@@ -164,11 +348,14 @@ main .biographie {
   border-radius: 15px;
   text-align: justify;
   margin: auto;
-  background-color: #4A849C;
+  background-color: #115F7E;
   margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 main .biographie h2 {
   color: gold;
+  font-family: "lobster";
 }
 main .biographie p {
   color: gold;
@@ -179,13 +366,18 @@ main .biographie a {
 main .detail {
   margin-top: 1.5rem;
 }
-main h2 {
-  padding-top: 0.5rem;
-  padding-left: 0.3rem;
-}
 main .histoire {
   padding: 1rem;
   letter-spacing: 0.1rem;
+}
+main .titleBloc {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #b77342;
+  margin: auto;
+  max-width: 1500px;
+  flex-wrap: wrap;
 }
 main .titleBook {
   position: relative;
@@ -195,13 +387,13 @@ main .titleBook {
   margin: 1rem;
   font-size: 20px;
   text-decoration: none;
-  color: #222;
+  color: white;
 }
 main .titleBook::before {
   content: "";
   position: absolute;
-  background: #CFAE6E;
-  width: 20%;
+  background: gold;
+  width: 100%;
   height: 3px;
   top: 2rem;
   transform-origin: 100% 0;
@@ -241,13 +433,25 @@ main section {
   padding-top: 1.5rem;
   display: flex;
   justify-content: flex-start;
-  background-color: rgb(193, 148, 148);
+  background-color: #b77342;
   margin: auto;
   max-width: 1500px;
   flex-wrap: wrap;
 }
 main section .blocBook {
   width: 33%;
+}
+main section .blocBook .blocText .title-book-accueil {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: gold;
+  margin-top: 2rem;
+  font-family: "roboto";
+}
+main section .blocBook .blocText .priceBloc .price-accueil {
+  color: white;
+  margin: 2rem 0 2rem 0;
+  font-family: "roboto";
 }
 main section div {
   margin: auto;
@@ -256,12 +460,13 @@ main section div {
   flex-direction: column;
   text-align: center;
 }
-main section div .imgBook {
-  width: 100px;
+main section div img {
   object-fit: cover;
   transition: transform 0.1s;
+  margin: auto;
+  height: 220px;
 }
-main section div .imgBook:hover {
+main section div img:hover {
   -ms-transform: scale(1.5);
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
@@ -287,40 +492,6 @@ main section div .panier {
   margin: 0 1rem;
   height: 25px;
   width: 25px;
-}
-
-#titleMusicVideo {
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.allListMusic {
-  max-width: 1500px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.allListMusic .blocMusic {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 33%;
-  padding: 2rem 0;
-}
-.allListMusic .blocMusic img {
-  height: 33%;
-  object-fit: contain;
-  margin: auto;
-}
-.allListMusic .blocMusic .blocText {
-  margin: auto;
-  font-family: "roboto";
-  display: flex;
-  flex-direction: column;
-}
-.allListMusic .titleName {
-  font-weight: bold;
 }
 
 #carou {
@@ -423,14 +594,12 @@ main section div .panier {
   }
   header nav .open {
     display: flex;
+    position: absolute;
+    right: 0;
     flex-direction: column;
     text-align: center;
   }
   main section .blocBook {
-    width: 50%;
-    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-  }
-  .allListMusic .blocMusic {
     width: 50%;
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   }
@@ -439,116 +608,6 @@ main section div .panier {
   main section .blocBook {
     width: 80%;
     padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-  }
-  .allListMusic .blocMusic {
-    width: 100%;
-    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-  }
-}
-footer {
-  width: 100%;
-  background-color: #b77342;
-}
-footer p {
-  color: white;
-}
-footer h3 {
-  font-family: "kamal";
-  letter-spacing: 0.1rem;
-}
-footer .interL {
-  margin-left: 0.5rem;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-  margin-left: 0.5rem;
-}
-footer a:hover {
-  text-decoration: underline #CFAE6E;
-}
-footer > div {
-  margin-left: 2rem;
-  max-width: 1500px;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  padding-top: 1rem;
-}
-footer img {
-  width: 2rem;
-  height: 2rem;
-  margin-top: 0.5rem;
-}
-
-.phone {
-  display: flex;
-  align-items: center;
-}
-
-.gmail {
-  display: flex;
-  align-items: center;
-}
-
-.insta {
-  display: flex;
-  align-items: center;
-}
-
-.fb {
-  display: flex;
-  align-items: center;
-}
-
-h3 {
-  color: white;
-}
-
-.comptefb {
-  margin-top: 0.8rem;
-  margin-left: 0.2rem;
-  font-family: "kamal";
-}
-
-.compte {
-  margin-top: 0.8rem;
-  margin-left: 0.2rem;
-  font-family: "lobster";
-}
-
-.num {
-  margin-top: 0.8rem;
-  margin-left: 0.2rem;
-  font-family: "lobster";
-}
-
-.inter {
-  margin-top: 0.8rem;
-  margin-left: 0.2rem;
-  font-family: "kamal";
-}
-
-@media screen and (max-width: 824px) {
-  footer div {
-    display: block;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  footer div h3 {
-    margin: 1rem 0;
-  }
-}
-@media screen and (max-width: 415px) {
-  footer div {
-    display: block;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  footer div h3 {
-    margin: 1rem 0;
   }
 }
 
